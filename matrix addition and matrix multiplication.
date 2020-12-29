@@ -1,0 +1,23 @@
+public static Double[][] multiplicar(Double[][] A, Double[][] B){
+//the method runs and returns a matrix of the correct dimensions
+//(I actually changed the .length function to a specific value to eliminate 
+//it as a possible issue), but not the correct values
+
+    Double[][] C= new Double[2][2];
+    int i,j;
+
+    ////I fill the matrix with zeroes, if I don't do this it gives me an error
+    for(i=0;i<2;i++) {
+        for(j=0;j<2;j++){
+            C[i][j]=0.00000;
+        }
+    } 
+    ///this is where I'm supposed to perform the adding of every element in
+    //a row of A multiplied by the corresponding element in the
+    //corresponding column of B, for all columns in B and all rows in A
+    for(i=0;i<2;i++){
+        for(j=0;j<2;j++)
+            C[i][j]+=(A[i][j]*B[j][i]);
+    }
+    return C;
+}
